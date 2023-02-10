@@ -43,6 +43,11 @@ if (specialChar === true) {
   passwordContainer.push(specialCharList);
 }
 
+//if user doesn't confirm anything, automatically uses lowercase characters
+if (passLength.length === 0) {
+  passwordContainer.push(lowercaseList);
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
